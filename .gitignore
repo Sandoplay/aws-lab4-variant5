@@ -1,5 +1,6 @@
-# зібрані архіви для консолі (відтворює scripts/build_zips.py)
+# локальні архіви для консолі й скрипт, що їх збирає
 dist/
+scripts/build_zips.py
 __pycache__/
 *.pyc
 # містить справжній Account ID; у репозиторії лишається шаблон Lab4IngestPolicy.json

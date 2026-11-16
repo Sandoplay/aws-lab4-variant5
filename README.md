@@ -17,7 +17,6 @@ S3 (`incoming/*.json`, `incoming/*.csv`) → два правила сповіщ�
 | `functions/json_ingest/`, `functions/csv_ingest/` | тільки парсер свого формату + `make_handler(...)` |
 | `tests/` | `python -m unittest discover -s tests -v` – без хмари й без boto3 |
 | `scripts/gen_test_files.py` | тестові файли в `test-files/` |
-| `scripts/build_zips.py` | архіви для консолі в `dist/` |
 | `scripts/upload_burst.py` | п'ять одночасних завантажень (частина D) |
 | `scripts/find_unmatched.py` | пошук файлів, які не оброблювала жодна функція |
 | `policy/Lab4IngestPolicy.json` | політика IAM (замінити `<ACCOUNT_ID>`) |
