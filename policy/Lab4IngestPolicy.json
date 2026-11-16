@@ -1,0 +1,36 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadIncomingObjects",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:GetObjectVersion"
+      ],
+      "Resource": "arn:aws:s3:::amogusadmin-lab4-ingest/incoming/*"
+    },
+    {
+      "Sid": "WriteIngestTable",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:PutItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:BatchWriteItem"
+      ],
+      "Resource": "arn:aws:dynamodb:eu-north-1:<ACCOUNT_ID>:table/lab4-ingest"
+    },
+    {
+      "Sid": "NaiveCounterExperimentOnly",
+      "Effect": "Allow",
+      "Action": "dynamodb:GetItem",
+      "Resource": "arn:aws:dynamodb:eu-north-1:<ACCOUNT_ID>:table/lab4-ingest"
+    },
+    {
+      "Sid": "SendFailedEventsToQueue",
+      "Effect": "Allow",
+      "Action": "sqs:SendMessage",
+      "Resource": "arn:aws:sqs:eu-north-1:<ACCOUNT_ID>:lab4-ingest-failures"
+    }
+  ]
+}

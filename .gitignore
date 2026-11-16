@@ -1,0 +1,8 @@
+# зібрані архіви для консолі (відтворює scripts/build_zips.py)
+dist/
+__pycache__/
+*.pyc
+# містить справжній Account ID; у репозиторії лишається шаблон Lab4IngestPolicy.json
+policy/Lab4IngestPolicy_для_консолі.json
+# локальна покрокова інструкція, не для репозиторію
+КРОКИ_В_КОНСОЛІ.md

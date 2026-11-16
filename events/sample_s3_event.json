@@ -1,0 +1,29 @@
+{
+  "Records": [
+    {
+      "eventVersion": "2.1",
+      "eventSource": "aws:s3",
+      "awsRegion": "eu-north-1",
+      "eventTime": "2026-11-16T12:00:00.000Z",
+      "eventName": "ObjectCreated:Put",
+      "userIdentity": { "principalId": "AWS:EXAMPLE" },
+      "requestParameters": { "sourceIPAddress": "203.0.113.10" },
+      "responseElements": { "x-amz-request-id": "EXAMPLE123456789", "x-amz-id-2": "EXAMPLE" },
+      "s3": {
+        "s3SchemaVersion": "1.0",
+        "configurationId": "lab4-json",
+        "bucket": {
+          "name": "amogusadmin-lab4-ingest",
+          "ownerIdentity": { "principalId": "EXAMPLE" },
+          "arn": "arn:aws:s3:::amogusadmin-lab4-ingest"
+        },
+        "object": {
+          "key": "incoming/people+1.json",
+          "size": 98,
+          "eTag": "0123456789abcdef0123456789abcdef",
+          "sequencer": "0A1B2C3D4E5F678901"
+        }
+      }
+    }
+  ]
+}
